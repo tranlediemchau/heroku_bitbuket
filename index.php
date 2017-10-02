@@ -1,16 +1,16 @@
-<title>Cài đặt thành công</title>
+<?php
+//define path
+require_once("config/define_path.php");
 
-<h1>Chúc mừng bạn đã cài đặt thành công Heroku App!</h1>
+require_once("config/define_database.php");
+//end define path
+require_once(__LIB_PATH."Session.php");
+require_once(__LIB_PATH."Controller.php");
+require_once(__LIB_PATH."View.php");
+require_once(__LIB_PATH."Model.php");
+require_once(__LIB_PATH."Bootstrap.php");
 
+//__LIB_PATH cho nay la noi de cau render set cho tat ca cac require include, noi xe dieu khien chuong trinh chay
+$bootstrap= new Bootstrap;
 
-
-Sau khi đăng nhập thành công hãy xóa các file 
-<ul>
- <li><b>index.php</b></li>
- <li><b>info.php</b></li>
- <li><b>README.md</b></li>
-</ul>
-Nếu bạn không cần dùng composer hãy xóa <b>composer.json</b> và mục <b>vendor</b>
-
-<h3><font color="red">Lưu ý!</font></h3>
-Không được xóa các tệp khác ngoài các tệp nêu trên, như <b>.heroku</b>, <b>.composer</b> v.vv
+?>
